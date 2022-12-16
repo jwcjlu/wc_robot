@@ -5,10 +5,15 @@ import "fmt"
 const (
 	host = "https://v2.alapi.cn"
 
-	soulPath    = "/api/soul"
-	qinghuaPath = "/api/qinghua"
-	mingyanPath = "/api/mingyan"
-	jokePath    = "/api/joke/random"
+	soulPath       = "/api/soul"
+	qinghuaPath    = "/api/qinghua"
+	mingyanPath    = "/api/mingyan"
+	jokePath       = "/api/joke/random"
+	weiboHotSearch = "https://apis.tianapi.com/weibohot/index?key=b20319a72e08d927d5a526ceb4310549"
+	gjmj           = "https://apis.tianapi.com/gjmj/index?key=b20319a72e08d927d5a526ceb4310549"
+	caijing        = "https://apis.tianapi.com/caijing/index?key=b20319a72e08d927d5a526ceb4310549&num=10"
+	topnews        = "https://apis.tianapi.com/topnews/index?key=b20319a72e08d927d5a526ceb4310549"
+	networkhot     = "https://apis.tianapi.com/networkhot/index?key=b20319a72e08d927d5a526ceb4310549"
 )
 
 // 响应码

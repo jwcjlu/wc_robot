@@ -225,7 +225,7 @@ func (c *Client) WebInit(rp *RequiredParams) (*WebInitResponse, error) {
 	params := url.Values{}
 	params.Add("_", strconv.FormatInt(time.Now().Unix(), 10))
 	uri.RawQuery = params.Encode()
-	b := map[string]any{
+	b := map[string]interface{}{
 		"BaseRequest": rp,
 	}
 	body, err := utils.ToJsonBuff(b)
@@ -285,7 +285,7 @@ func (c *Client) LoginNotify(rp *RequiredParams, username string) error {
 	params.Add("pass_ticket", rp.PassTicket)
 	uri, _ := url.Parse(c.host.BaseDomain() + common.Webwxstatusnotify)
 	uri.RawQuery = params.Encode()
-	b := map[string]any{
+	b := map[string]interface{}{
 		"BaseRequest":  rp,
 		"Code":         3, // 固定值
 		"FromUserName": username,
@@ -378,7 +378,7 @@ func (c *Client) SyncMsg(rp *RequiredParams, syncKey *SyncKey) (*SyncMsgResp, er
 		return nil, err
 	}
 	uri.RawQuery = params.Encode()
-	b := map[string]any{
+	b := map[string]interface{}{
 		"BaseRequest": rp,
 		"SyncKey":     syncKey,
 		"rr":          strconv.FormatInt(-time.Now().Unix(), 10),
@@ -414,7 +414,7 @@ func (c *Client) SendMsg(rp *RequiredParams, msg *SendMessage) (*SendMessageResp
 		return nil, err
 	}
 	uri.RawQuery = params.Encode()
-	b := map[string]any{
+	b := map[string]interface{}{
 		"BaseRequest": rp,
 		"Msg":         msg,
 		"Scene":       0,

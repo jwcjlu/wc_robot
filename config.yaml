@@ -1,7 +1,7 @@
 # 改成自己机器人的微信昵称
-robot_name: "机器人的微信昵称"
+robot_name: "bot"
 # 机器人只回复以下昵称(用户/群)，多个昵称通过英文逗号','分隔(不支持备注，因为微信正常消息通信时并不返回群聊备注，因而统一用昵称)
-on_contact_nicknames: "a,b,c"
+on_contact_nicknames: "巴西四零七,伟,溜娃群,叙家常"
 
 # 以下 switch_on 都代表是否开启该功能, true 表示开启该功能
 
@@ -17,8 +17,8 @@ covid_msg_handle:
 # token 需自行到 https://admin.alapi.cn/user/register 注册获取
 # 该 api 免费用户支持 1qps 调用，对于个人使用来说绰绰有余
 alapi:
-  switch_on: false
-  token: "你自己注册得到的 token"
+  switch_on: true
+  token: "w1hWp1GUg616sZIb"
 
 # 每日定时发送天气消息，支持发送给指定昵称/备注用户(群聊)，多个可用','分隔
 # times 表示提醒时间，多个也可用','分隔

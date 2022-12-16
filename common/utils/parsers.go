@@ -20,7 +20,7 @@ func ScanJson(resp *http.Response, v interface{}) error {
 }
 
 // ToJsonBuff 转成 json 格式的 buff，作为 http body
-func ToJsonBuff(v any) (*bytes.Buffer, error) {
+func ToJsonBuff(v interface{}) (*bytes.Buffer, error) {
 	var b bytes.Buffer
 	e := json.NewEncoder(&b)
 	// 设置禁止html转义
