@@ -45,7 +45,7 @@ func main() {
 		crontab := cron.New(cron.WithSeconds()) //精确到秒
 		//定义定时器调用的任务函数
 		task := func() {
-			ms := robot.Storage.SearchMembersByNickName(1, "测试")
+			ms := robot.Storage.SearchMembersByNickName(1, "叙家常")
 			if len(ms) < 1 {
 				return
 			}
@@ -58,10 +58,10 @@ func main() {
 				robot.Storage.Self.SendTextToUser(ms[0], soul)
 			}
 
-			hs, err := alapi.WeiboHotSearch()
-			if err == nil {
-				robot.Storage.Self.SendTextToUser(ms[0], hs)
-			}
+			/*	hs, err := alapi.WeiboHotSearch()
+				if err == nil {
+					robot.Storage.Self.SendTextToUser(ms[0], hs)
+				}*/
 			gj, err := alapi.Gjmj()
 			if err == nil {
 				robot.Storage.Self.SendTextToUser(ms[0], gj)
